@@ -55,12 +55,12 @@ class Networking {
         return nil
     }
     
-    func testConnection(user : String, password : String) -> Bool {
-        if (baseUrl? != nil) {
-            if loader.loginWithUsername(user, andPassword: password) {
-                return true
-            }
-        }
-        return false
-    }    
+//    func testConnection(user : String, password : String) -> Bool {
+//        if (baseUrl? != nil) {
+//            if loader.loginWithUsername(user, andPassword: password) {
+//                return true
+//            }
+//        }
+//        return false
+//    }    
 }

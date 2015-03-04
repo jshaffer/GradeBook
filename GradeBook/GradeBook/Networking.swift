@@ -38,8 +38,8 @@ class Networking {
         self.password = psw
     }
     
-    func getSections() -> String {
-        if (self.baseUrl? != nil) {
+    func getSections() -> JSON? {
+        if (self.baseUrl? != nil && self.userName != "") {
             let path = "?record=sections"
             
             if loader.loginWithUsername(self.userName, andPassword: self.password) {
@@ -49,24 +49,10 @@ class Networking {
                 let newData = dataStr?.dataUsingEncoding(NSUTF8StringEncoding)
                 
                 let json = JSON(data: newData!)
-                println("\(json)")
-                
-                let inner = json["sections"]
-                println("\(inner)")
-                
-                let ere = "a"
-                
-//                if let str = dataStr as? NSString {
-//                    let json = JSON(str)
-//
-//                    let inner = json["sections"][0]["id"]
-//                    println("\(inner)")
-//                    
-//                    return json
-//                }
+                return json
             }
         }
-        return ""
+        return nil
     }
     
     func testConnection(user : String, password : String) -> Bool {
@@ -76,11 +62,5 @@ class Networking {
             }
         }
         return false
-    }
-    
-    
-    
+    }    
 }
-
-
-//            let data = loader.loadDataFromPath("?record=enrollments&term=2002&course=999", error: nil)

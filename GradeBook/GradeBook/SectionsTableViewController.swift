@@ -11,22 +11,15 @@ import UIKit
 class SectionsTableViewController: UITableViewController {
     let net = Networking()
 
-    var jsonData : String?
-//    var jsonData : JSON?
-//    {
-//        didSet {
-//            self.tableView?.reloadData()
-//        }
-//    }
+    var jsonData : JSON?
+    {
+        didSet {
+            self.tableView?.reloadData()
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        
-//        jsonData = net.getSections()
-//        println("\(self.jsonData!)")
-//        let inner = self.jsonData!.array   //!["sections"][0]
-//        println("\(inner)")
         
 //        var nav = self.navigationController?.navigationBar
 //        nav?.barStyle = UIBarStyle.Black
@@ -40,8 +33,10 @@ class SectionsTableViewController: UITableViewController {
     }
     
     override func viewWillAppear(animated: Bool) {
-        super.viewWillAppear(animated)
-        
+        if net.baseUrl != nil {
+            jsonData = net.getSections()
+        }
+
     }
 
     // MARK: - Table view data source
@@ -51,9 +46,9 @@ class SectionsTableViewController: UITableViewController {
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        if let sections = self.jsonData?["sections"].array? {
-//            return sections.count
-//        }
+        if let sections = self.jsonData?["sections"].array? {
+            return sections.count
+        }
         return 1
     }
 
@@ -61,19 +56,9 @@ class SectionsTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("sectionCell", forIndexPath: indexPath) as UITableViewCell
         
-//        if let data = self.jsonData?["sections"].array? {
-//            cell.textLabel?.text = data[indexPath.row]["title"].stringValue
-//        }
-        
-        let nsData : NSString = NSString(string: jsonData!)
-        let json = JSON(nsData)
-        let inner = json["sections"].array?
-        println("\(inner)")
-        
-        cell.textLabel?.text = "foo"
-        
-        
-        // Configure the cell...
+        if let data = self.jsonData?["sections"].array? {
+            cell.textLabel?.text = data[indexPath.row]["title"].stringValue
+        }        
 
         return cell
     }
@@ -121,7 +106,15 @@ class SectionsTableViewController: UITableViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using [segue destinationViewController].
         // Pass the selected object to the new view controller.
-    }
-    */
+        
+        if segue.identifier == "settings" {
+            if let loginVC = segue.destinationViewController as? LoginViewController {
+                loginVC.usr = net.userName?
+                loginVC.psw = net.password?
+                loginVC.base = net.baseUrl?
+            }
+        }
+    }*/
+
 
 }

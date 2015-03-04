@@ -15,7 +15,44 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.        
+        // Override point for customization after application launch.
+
+        let (d0, e2) = Locksmith.loadDataForUserAccount("gbUserName")
+        let (d1, e3) = Locksmith.loadDataForUserAccount("gbPassword")
+        
+        let d2 = d0?["userName"] as? String
+        let d3 = d1?["password"] as? String
+
+        if UIDevice.currentDevice().userInterfaceIdiom == .Pad {
+            if let newRoot = window?.rootViewController?.storyboard?.instantiateViewControllerWithIdentifier("iPadMain") as? UISplitViewController {
+                window?.rootViewController = newRoot
+                if let navVc = newRoot.viewControllers[0] as? UINavigationController {
+//                    if let quakeOverview = navVc.topViewController as? QuakeOverviewViewController {
+//                        quakeOverview.earthquakes = quakes
+//                    }
+                    
+                }
+            }
+        }
+        else {
+            if let loginVC = window?.rootViewController as? LoginViewController {
+                if d0?.count == 1 && d1?.count == 1 {
+                    loginVC.usr = d2?
+                    loginVC.psw = d3?
+                }
+                
+                
+//                for navVC in tabVC.viewControllers as [UINavigationController] {
+//                    if let quakeVC = navVC.topViewController as? QuakeOverviewViewController {
+//                        quakeVC.earthquakes = quakes
+//                    }
+//                }
+            }
+        }
+        
+        
+        
+        
         return true
     }
 

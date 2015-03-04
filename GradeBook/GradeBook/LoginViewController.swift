@@ -13,38 +13,41 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var userName: UITextField!
     @IBOutlet weak var password: UITextField!
     @IBOutlet weak var baseUrl: UITextField!
+    @IBOutlet weak var savePassword: UISwitch!
     
+    var usr : String?
+    var psw : String?
+    
+    override func viewDidLoad() {
+        let (d0, e0) = Locksmith.loadDataForUserAccount("gbUserName")
+        let (d1, e1) = Locksmith.loadDataForUserAccount("gbPassword")
+        
+        if d0?.count == 1 {
+            let usr = d0?["userName"] as? String
+            userName.text = usr
+        } else if userName != nil {
+            userName.text = usr?
+        }
+            
+        if d1?.count == 1 {
+            let psw = d1?["password"] as? String
+            password.text = psw
+        } else if password != nil {
+            password.text = psw?
+        }
+    }
     
     @IBAction func login(sender: AnyObject) {
-        println("\(userName.text)")
-        println("\(password.text)")
-        println("\(baseUrl.text)")
+        let e0 = Locksmith.deleteDataForUserAccount("gbUserName")
+        let e1 = Locksmith.deleteDataForUserAccount("gbPassword")
+        
+        if savePassword.on {
+            let e0 = Locksmith.saveData(["userName": userName.text], forUserAccount: "gbUserName")
+            let e1 = Locksmith.saveData(["password": password.text], forUserAccount: "gbPassword")
+        }
         
         self.performSegueWithIdentifier("login", sender: self)
     }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-
-//    override func shouldPerformSegueWithIdentifier(identifier: String?, sender: AnyObject?) -> Bool {
-//        let net = Networking(baseUrl.text)
-//        
-//        if identifier == "login" && net.testConnection(userName.text, password: password.text) {
-//            return true
-//        } else {
-//            return false
-//        }
-//        
-//    }
     
     // MARK: - Navigation
 
@@ -57,12 +60,9 @@ class LoginViewController: UIViewController {
         if segue.identifier == "login" {
             if let navVC = segue.destinationViewController as? UINavigationController {
                 if let sectionsVC = navVC.viewControllers[0] as? SectionsTableViewController {
-                    println("hello")
                     sectionsVC.net.baseUrl = baseUrl.text
                     sectionsVC.net.userName = userName.text
                     sectionsVC.net.password = password.text
-                    
-                    sectionsVC.jsonData = sectionsVC.net.getSections()
                 }
 
             }

@@ -18,6 +18,8 @@
 		951AF4F11AA69268002A13A9 /* SectionsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951AF4F01AA69268002A13A9 /* SectionsTableViewController.swift */; };
 		951AF4F31AA69478002A13A9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 951AF4F21AA69478002A13A9 /* Main.storyboard */; };
 		953CCBDE1AA6C77100E74789 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953CCBDD1AA6C77100E74789 /* SwiftyJSON.swift */; };
+		953CCBE11AA6E6B500E74789 /* Locksmith.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953CCBDF1AA6E6B500E74789 /* Locksmith.swift */; };
+		953CCBE21AA6E6B500E74789 /* LocksmithRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953CCBE01AA6E6B500E74789 /* LocksmithRequest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		951AF4F01AA69268002A13A9 /* SectionsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionsTableViewController.swift; sourceTree = "<group>"; };
 		951AF4F21AA69478002A13A9 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		953CCBDD1AA6C77100E74789 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
+		953CCBDF1AA6E6B500E74789 /* Locksmith.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Locksmith.swift; sourceTree = "<group>"; };
+		953CCBE01AA6E6B500E74789 /* LocksmithRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocksmithRequest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +98,8 @@
 				951AF4EC1AA684AD002A13A9 /* Networking.swift */,
 				953CCBDD1AA6C77100E74789 /* SwiftyJSON.swift */,
 				951AF4F21AA69478002A13A9 /* Main.storyboard */,
+				953CCBDF1AA6E6B500E74789 /* Locksmith.swift */,
+				953CCBE01AA6E6B500E74789 /* LocksmithRequest.swift */,
 				951AF4F01AA69268002A13A9 /* SectionsTableViewController.swift */,
 				951AF4EE1AA68CCC002A13A9 /* LoginViewController.swift */,
 				950707731A9F99BC000F5040 /* Images.xcassets */,
@@ -233,9 +239,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				953CCBE11AA6E6B500E74789 /* Locksmith.swift in Sources */,
 				951AF4EF1AA68CCC002A13A9 /* LoginViewController.swift in Sources */,
 				951AF4F11AA69268002A13A9 /* SectionsTableViewController.swift in Sources */,
 				951AF4ED1AA684AD002A13A9 /* Networking.swift in Sources */,
+				953CCBE21AA6E6B500E74789 /* LocksmithRequest.swift in Sources */,
 				9507076D1A9F99BC000F5040 /* AppDelegate.swift in Sources */,
 				951AF4EA1AA60C3A002A13A9 /* GradebookURLLoader.m in Sources */,
 				953CCBDE1AA6C77100E74789 /* SwiftyJSON.swift in Sources */,

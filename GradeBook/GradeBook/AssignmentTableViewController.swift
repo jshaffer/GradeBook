@@ -21,9 +21,9 @@ class AssignmentTableViewController: UITableViewController {
         {
         didSet {
             var i : Int = 0
-            for (index, score) in jsonData!["underscores"] {
-                let enroll = score["name"].stringValue
-                name.insert(enroll, atIndex: i)
+            for (index, score) in jsonData!["userscores"] {
+                let aScore = score["name"].stringValue
+                name.insert(aScore, atIndex: i)
                 
                 let anId = score["id"].stringValue
                 id.insert(anId, atIndex: i)

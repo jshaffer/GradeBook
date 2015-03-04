@@ -74,7 +74,7 @@ class Networking {
     
     func getAssignments(term : String, course : String, user : String) -> JSON? {
         if (self.baseUrl? != nil && self.userName != "") {
-            let path = "?record=underscores&term=" + term + "&course=" + course + "&user=" + user
+            let path = "?record=userscores&term=" + term + "&course=" + course + "&user=" + user
             
             if loader.loginWithUsername(self.userName, andPassword: self.password) {
                 let data = loader.loadDataFromPath(path, error: nil)

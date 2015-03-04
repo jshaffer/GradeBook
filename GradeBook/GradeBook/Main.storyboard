@@ -97,7 +97,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="jeR-cL-4tu" kind="show" identifier="enrollment" id="Unt-jd-ybp"/>
+                                    <segue destination="jeR-cL-4tu" kind="show" identifier="enrollment" id="OAw-TH-isl"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -119,9 +119,9 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ASX-Vd-jVo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-797" y="-544"/>
+            <point key="canvasLocation" x="-491" y="-592"/>
         </scene>
-        <!--Enrollment Table View Controller-->
+        <!--Enrollment-->
         <scene sceneID="iHR-o9-XKU">
             <objects>
                 <tableViewController id="jeR-cL-4tu" customClass="EnrollmentTableViewController" customModule="GradeBook" customModuleProvider="target" sceneMemberID="viewController">
@@ -150,7 +150,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="wWv-Fa-5K7" kind="show" identifier="assignment" id="fot-lk-fEo"/>
+                                    <segue destination="wWv-Fa-5K7" kind="show" identifier="assignment" id="Oyq-96-8Vm"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -159,12 +159,13 @@
                             <outlet property="delegate" destination="jeR-cL-4tu" id="kcE-8X-c55"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Enrollment" id="BxS-mX-JdK"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WWP-iI-7X0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="44" y="-925"/>
+            <point key="canvasLocation" x="294" y="-725"/>
         </scene>
-        <!--Assignment Table View Controller-->
+        <!--Assignments-->
         <scene sceneID="rFh-fk-z89">
             <objects>
                 <tableViewController id="wWv-Fa-5K7" customClass="AssignmentTableViewController" customModule="GradeBook" customModuleProvider="target" sceneMemberID="viewController">
@@ -185,10 +186,11 @@
                             <outlet property="delegate" destination="wWv-Fa-5K7" id="qXo-8V-baL"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Assignments" id="PNn-cn-ks5"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ILd-c3-i7N" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="773" y="-925"/>
+            <point key="canvasLocation" x="1052" y="-725"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="KPe-7T-aHM">

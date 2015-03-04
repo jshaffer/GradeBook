@@ -16,9 +16,11 @@ class EnrollmentTableViewController: UITableViewController {
     
     let net = Networking()
     
-    var jsonData : JSON?
-        {
+    var jsonData : JSON? {
         didSet {
+            name.removeAll(keepCapacity: true)
+            id.removeAll(keepCapacity: true)
+            
             var i : Int = 0
             for (index, enrollment) in jsonData!["enrollments"] {
                 let enroll = enrollment["first_name"].stringValue + enrollment["last_name"].stringValue

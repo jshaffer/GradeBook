@@ -8,11 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		9507076D1A9F99BC000F5040 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9507076C1A9F99BC000F5040 /* AppDelegate.swift */; };
-		9507076F1A9F99BC000F5040 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9507076E1A9F99BC000F5040 /* ViewController.swift */; };
-		950707721A9F99BC000F5040 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 950707701A9F99BC000F5040 /* Main.storyboard */; };
 		950707741A9F99BC000F5040 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 950707731A9F99BC000F5040 /* Images.xcassets */; };
 		950707771A9F99BC000F5040 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 950707751A9F99BC000F5040 /* LaunchScreen.xib */; };
 		950707831A9F99BC000F5040 /* GradeBookTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950707821A9F99BC000F5040 /* GradeBookTests.swift */; };
+		951AF4EA1AA60C3A002A13A9 /* GradebookURLLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 951AF4E71AA60C3A002A13A9 /* GradebookURLLoader.m */; };
+		951AF4EB1AA60C3A002A13A9 /* NSString+Base64Encoding.m in Sources */ = {isa = PBXBuildFile; fileRef = 951AF4E91AA60C3A002A13A9 /* NSString+Base64Encoding.m */; };
+		951AF4ED1AA684AD002A13A9 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951AF4EC1AA684AD002A13A9 /* Networking.swift */; };
+		951AF4EF1AA68CCC002A13A9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951AF4EE1AA68CCC002A13A9 /* LoginViewController.swift */; };
+		951AF4F11AA69268002A13A9 /* SectionsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951AF4F01AA69268002A13A9 /* SectionsTableViewController.swift */; };
+		951AF4F31AA69478002A13A9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 951AF4F21AA69478002A13A9 /* Main.storyboard */; };
+		953CCBDE1AA6C77100E74789 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953CCBDD1AA6C77100E74789 /* SwiftyJSON.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,13 +34,21 @@
 		950707671A9F99BC000F5040 /* GradeBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GradeBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9507076B1A9F99BC000F5040 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9507076C1A9F99BC000F5040 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9507076E1A9F99BC000F5040 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		950707711A9F99BC000F5040 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		950707731A9F99BC000F5040 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		950707761A9F99BC000F5040 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		9507077C1A9F99BC000F5040 /* GradeBookTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GradeBookTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		950707811A9F99BC000F5040 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		950707821A9F99BC000F5040 /* GradeBookTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradeBookTests.swift; sourceTree = "<group>"; };
+		951AF4E51AA60C3A002A13A9 /* Gradebook-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Gradebook-Bridging-Header.h"; sourceTree = "<group>"; };
+		951AF4E61AA60C3A002A13A9 /* GradebookURLLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GradebookURLLoader.h; sourceTree = "<group>"; };
+		951AF4E71AA60C3A002A13A9 /* GradebookURLLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GradebookURLLoader.m; sourceTree = "<group>"; };
+		951AF4E81AA60C3A002A13A9 /* NSString+Base64Encoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Base64Encoding.h"; sourceTree = "<group>"; };
+		951AF4E91AA60C3A002A13A9 /* NSString+Base64Encoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Base64Encoding.m"; sourceTree = "<group>"; };
+		951AF4EC1AA684AD002A13A9 /* Networking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
+		951AF4EE1AA68CCC002A13A9 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		951AF4F01AA69268002A13A9 /* SectionsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionsTableViewController.swift; sourceTree = "<group>"; };
+		951AF4F21AA69478002A13A9 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		953CCBDD1AA6C77100E74789 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,8 +91,11 @@
 			isa = PBXGroup;
 			children = (
 				9507076C1A9F99BC000F5040 /* AppDelegate.swift */,
-				9507076E1A9F99BC000F5040 /* ViewController.swift */,
-				950707701A9F99BC000F5040 /* Main.storyboard */,
+				951AF4EC1AA684AD002A13A9 /* Networking.swift */,
+				953CCBDD1AA6C77100E74789 /* SwiftyJSON.swift */,
+				951AF4F21AA69478002A13A9 /* Main.storyboard */,
+				951AF4F01AA69268002A13A9 /* SectionsTableViewController.swift */,
+				951AF4EE1AA68CCC002A13A9 /* LoginViewController.swift */,
 				950707731A9F99BC000F5040 /* Images.xcassets */,
 				950707751A9F99BC000F5040 /* LaunchScreen.xib */,
 				9507076A1A9F99BC000F5040 /* Supporting Files */,
@@ -91,6 +107,11 @@
 			isa = PBXGroup;
 			children = (
 				9507076B1A9F99BC000F5040 /* Info.plist */,
+				951AF4E51AA60C3A002A13A9 /* Gradebook-Bridging-Header.h */,
+				951AF4E61AA60C3A002A13A9 /* GradebookURLLoader.h */,
+				951AF4E71AA60C3A002A13A9 /* GradebookURLLoader.m */,
+				951AF4E81AA60C3A002A13A9 /* NSString+Base64Encoding.h */,
+				951AF4E91AA60C3A002A13A9 /* NSString+Base64Encoding.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -192,7 +213,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				950707721A9F99BC000F5040 /* Main.storyboard in Resources */,
+				951AF4F31AA69478002A13A9 /* Main.storyboard in Resources */,
 				950707771A9F99BC000F5040 /* LaunchScreen.xib in Resources */,
 				950707741A9F99BC000F5040 /* Images.xcassets in Resources */,
 			);
@@ -212,8 +233,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9507076F1A9F99BC000F5040 /* ViewController.swift in Sources */,
+				951AF4EF1AA68CCC002A13A9 /* LoginViewController.swift in Sources */,
+				951AF4F11AA69268002A13A9 /* SectionsTableViewController.swift in Sources */,
+				951AF4ED1AA684AD002A13A9 /* Networking.swift in Sources */,
 				9507076D1A9F99BC000F5040 /* AppDelegate.swift in Sources */,
+				951AF4EA1AA60C3A002A13A9 /* GradebookURLLoader.m in Sources */,
+				953CCBDE1AA6C77100E74789 /* SwiftyJSON.swift in Sources */,
+				951AF4EB1AA60C3A002A13A9 /* NSString+Base64Encoding.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -236,14 +262,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		950707701A9F99BC000F5040 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				950707711A9F99BC000F5040 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		950707751A9F99BC000F5040 /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -338,9 +356,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = GradeBook/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "GradeBook/GradeBook-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -348,9 +369,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = GradeBook/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "GradeBook/GradeBook-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -407,6 +430,7 @@
 				950707881A9F99BC000F5040 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		950707891A9F99BC000F5040 /* Build configuration list for PBXNativeTarget "GradeBookTests" */ = {
 			isa = XCConfigurationList;
@@ -415,6 +439,7 @@
 				9507078B1A9F99BC000F5040 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -1,5 +1,5 @@
 //
-//  SectionTableViewCell.swift
+//  EnrollmentTableViewCell.swift
 //  GradeBook
 //
 //  Created by Classroom Tech User on 3/4/15.
@@ -8,11 +8,12 @@
 
 import UIKit
 
-class SectionTableViewCell: UITableViewCell {
-    
+class EnrollmentTableViewCell: UITableViewCell {
+
     var term : String = ""
     var course : String = ""
-
+    var user : String = ""
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

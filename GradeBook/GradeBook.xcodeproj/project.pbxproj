@@ -22,6 +22,9 @@
 		953CCBDE1AA6C77100E74789 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953CCBDD1AA6C77100E74789 /* SwiftyJSON.swift */; };
 		953CCBE11AA6E6B500E74789 /* Locksmith.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953CCBDF1AA6E6B500E74789 /* Locksmith.swift */; };
 		953CCBE21AA6E6B500E74789 /* LocksmithRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953CCBE01AA6E6B500E74789 /* LocksmithRequest.swift */; };
+		955C254A1AA762690080C9F6 /* AssignmentTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955C25491AA762690080C9F6 /* AssignmentTableViewController.swift */; };
+		955C254C1AA763C10080C9F6 /* AssignmentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955C254B1AA763C10080C9F6 /* AssignmentTableViewCell.swift */; };
+		955C254E1AA767070080C9F6 /* EnrollmentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955C254D1AA767070080C9F6 /* EnrollmentTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +60,9 @@
 		953CCBDD1AA6C77100E74789 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 		953CCBDF1AA6E6B500E74789 /* Locksmith.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Locksmith.swift; sourceTree = "<group>"; };
 		953CCBE01AA6E6B500E74789 /* LocksmithRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocksmithRequest.swift; sourceTree = "<group>"; };
+		955C25491AA762690080C9F6 /* AssignmentTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssignmentTableViewController.swift; sourceTree = "<group>"; };
+		955C254B1AA763C10080C9F6 /* AssignmentTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssignmentTableViewCell.swift; sourceTree = "<group>"; };
+		955C254D1AA767070080C9F6 /* EnrollmentTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnrollmentTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,11 +108,14 @@
 				951AF4EC1AA684AD002A13A9 /* Networking.swift */,
 				953CCBDD1AA6C77100E74789 /* SwiftyJSON.swift */,
 				951AF4F21AA69478002A13A9 /* Main.storyboard */,
-				951FD9E51AA7550A0041225B /* EnrollmentTableViewController.swift */,
 				953CCBDF1AA6E6B500E74789 /* Locksmith.swift */,
 				953CCBE01AA6E6B500E74789 /* LocksmithRequest.swift */,
+				951FD9E51AA7550A0041225B /* EnrollmentTableViewController.swift */,
+				955C254D1AA767070080C9F6 /* EnrollmentTableViewCell.swift */,
 				951AF4F01AA69268002A13A9 /* SectionsTableViewController.swift */,
 				951FD9E71AA75BC90041225B /* SectionTableViewCell.swift */,
+				955C254B1AA763C10080C9F6 /* AssignmentTableViewCell.swift */,
+				955C25491AA762690080C9F6 /* AssignmentTableViewController.swift */,
 				951AF4EE1AA68CCC002A13A9 /* LoginViewController.swift */,
 				950707731A9F99BC000F5040 /* Images.xcassets */,
 				950707751A9F99BC000F5040 /* LaunchScreen.xib */,
@@ -247,6 +256,8 @@
 			files = (
 				953CCBE11AA6E6B500E74789 /* Locksmith.swift in Sources */,
 				951AF4EF1AA68CCC002A13A9 /* LoginViewController.swift in Sources */,
+				955C254C1AA763C10080C9F6 /* AssignmentTableViewCell.swift in Sources */,
+				955C254E1AA767070080C9F6 /* EnrollmentTableViewCell.swift in Sources */,
 				951AF4F11AA69268002A13A9 /* SectionsTableViewController.swift in Sources */,
 				951FD9E61AA7550A0041225B /* EnrollmentTableViewController.swift in Sources */,
 				951AF4ED1AA684AD002A13A9 /* Networking.swift in Sources */,
@@ -255,6 +266,7 @@
 				9507076D1A9F99BC000F5040 /* AppDelegate.swift in Sources */,
 				951AF4EA1AA60C3A002A13A9 /* GradebookURLLoader.m in Sources */,
 				953CCBDE1AA6C77100E74789 /* SwiftyJSON.swift in Sources */,
+				955C254A1AA762690080C9F6 /* AssignmentTableViewController.swift in Sources */,
 				951AF4EB1AA60C3A002A13A9 /* NSString+Base64Encoding.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -72,6 +72,23 @@ class Networking {
         return nil
     }
     
+    func getAssignments(term : String, course : String, user : String) -> JSON? {
+        if (self.baseUrl? != nil && self.userName != "") {
+            let path = "?record=underscores&term=" + term + "&course=" + course + "&user=" + user
+            
+            if loader.loginWithUsername(self.userName, andPassword: self.password) {
+                let data = loader.loadDataFromPath(path, error: nil)
+                let dataStr = NSString(data: data, encoding: NSUTF8StringEncoding)
+                
+                let newData = dataStr?.dataUsingEncoding(NSUTF8StringEncoding)
+                
+                let json = JSON(data: newData!)
+                return json
+            }
+        }
+        return nil
+    }
+    
 //    func testConnection(user : String, password : String) -> Bool {
 //        if (baseUrl? != nil) {
 //            if loader.loginWithUsername(user, andPassword: password) {

@@ -22,7 +22,6 @@ class SectionsTableViewController: UITableViewController {
         if net.baseUrl != nil {
             jsonData = net.getSections()
         }
-
     }
 
     // MARK: - Table view data source
@@ -40,12 +39,41 @@ class SectionsTableViewController: UITableViewController {
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("sectionCell", forIndexPath: indexPath) as UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("sectionCell", forIndexPath: indexPath) as SectionTableViewCell
         
         if let data = self.jsonData?["sections"].array? {
             cell.textLabel?.text = data[indexPath.row]["title"].stringValue
+            cell.course = data[indexPath.row]["course"].stringValue
+            cell.term = data[indexPath.row]["term"].stringValue
         }        
 
         return cell
     }
+    
+    
+    // MARK: - Navigation
+    
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
+        if segue.identifier == "enrollment" {
+            if let enrollVC = segue.destinationViewController as? EnrollmentTableViewController {
+                if let cell = sender? as? SectionTableViewCell {
+                    enrollVC.net.baseUrl = net.baseUrl
+                    enrollVC.net.userName = net.userName
+                    enrollVC.net.password = net.password
+                    
+                    enrollVC.course = cell.course
+                    enrollVC.term = cell.term
+                }
+                
+            }
+        }
+    }
+
 }
+
+
+
+
